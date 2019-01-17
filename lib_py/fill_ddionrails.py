@@ -76,7 +76,7 @@ def concepts():
         #"concept":"concept_name",
         "topic_prefix":"topic_name",
     }, inplace=True)
-    valid = x.ix[ : , "concept_name"].duplicated() == False
+    valid = x.ix[ : , "concept"].duplicated() == False
     x = x.ix[valid]
     dor1.lower_all_names(x)
     x.to_csv("ddionrails/concepts.csv", index=False)
