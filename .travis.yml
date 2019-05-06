@@ -9,5 +9,14 @@ install:
   - pip install pipenv
   - pipenv install --dev
 script:
+  # Should fail, because publications.csv is missing
   - goodtables metadata/datapackage.json # structure and schema validation
-#  - python lib_py/validation/relations.py datasets # relation validation
+  # Should fail, because required field "title" is missing
+  - cp metadata/publications_missing_title.csv metadata/publications.csv
+  - goodtables metadata/datapackage.json
+  # Should fail, because required field "name" is missing
+  - cp metadata/publications_missing_name.csv metadata/publications.csv
+  - goodtables metadata/datapackage.json
+  # Should fail, because some rows have missing values for "name" column
+  - cp metadata/publications_original.csv metadata/publications.csv
+  - goodtables metadata/datapackage.json
