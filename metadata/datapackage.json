@@ -1,0 +1,85 @@
+{
+  "name": "soep-core",
+  "schema": "tabular-data-package",
+  "profile": "tabular-data-package",
+  "resources": [
+    {
+      "path": "publications.csv",
+      "profile": "tabular-data-resource",
+      "name": "publications",
+      "title": "Publications",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "name",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": true,
+              "maxLength": 255
+            }
+          },
+          {
+            "name": "title",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "author",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "year",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "abstract",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "cite",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "period",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "sub_type",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "maxLength": 255
+            }
+          },
+          {
+            "name": "studies",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "doi",
+            "type": "string",
+            "format": "default"
+          }
+        ]
+      }
+    }
+  ]
+}
