@@ -8,7 +8,6 @@ cache:
 install:
   - pip install pipenv
   - pipenv install --dev
-  - pipenv graph
 script:
   - goodtables metadata/datapackage.json # structure and schema validation
-  - python lib_py/validation/relations.py datasets # relation validation
+#  - python lib_py/validation/relations.py datasets # relation validation
