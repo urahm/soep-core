@@ -51,11 +51,6 @@
             "format": "default"
           },
           {
-            "name": "period",
-            "type": "string",
-            "format": "default"
-          },
-          {
             "name": "sub_type",
             "type": "string",
             "format": "default",
